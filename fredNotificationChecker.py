@@ -1,6 +1,7 @@
 import psycopg2
 import json
 import argparse
+import select
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT  # <-- ADD THIS LINE
 from pushoverSend import sendPushover
 
@@ -35,7 +36,7 @@ def db_listen():
     cur = connection.cursor()
     cur.execute("LISTEN new_item_added;")
     while True:
-        # select.select([connection],[],[])   #sleep until there is some data
+        select.select([connection],[],[])   #sleep until there is some data
         connection.poll()  # get the message
         while connection.notifies:
             notification = connection.notifies.pop()  # pop notification from list
