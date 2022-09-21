@@ -5,18 +5,18 @@ This is a python script that has been containerized into a Docker container to r
 ## Prerequisites
 
 - You need to have already run the Docker container on [this Github page](https://github.com/yenba/fredmiranda-post-upload-docker) that populates your database with the Fred Miranda posts.
-- Postgres Database
+- **Postgres Database**
     - Postgres Database Name (`DBNAME`)
     - Postgres Database Username (`DBUSER`)
     - Postgres Database Password (`DBPASS`)
     - Postgres Database Hostname (`DBHOST`)
-- Pushover Account
+- **Pushover Account**
     - Notifications are achieved by utilizing [Pushover](https://pushover.net/). You will need to create a Pushover account to properly run this script.
-- Pushover API User Key (`USERKEY`)
+- **Pushover API User Key (`USERKEY`)**
     - Documentation is here - [https://pushover.net/api](https://pushover.net/api)
-- Pushover API Token (`APIKEY`)
+- **Pushover API Token (`APIKEY`)**
     - Documentation is here - [https://pushover.net/api](https://pushover.net/api)
-- Docker
+- **Docker**
 
 ## Docker Hub Repo
 
